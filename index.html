@@ -52,7 +52,7 @@
     section {
         display: block;
     }
-    section h3 {
+    section>h3 {
         margin: 15px auto;
         /* font-weight: normal; */
         text-align: center;
@@ -60,16 +60,13 @@
     section  {
         display: none;
     }
-    section ol li {
+    section ol li a {
+        display: block;
         text-align: center;
         width: 100%;
         height: 80px;
         line-height: 80px;
         font-size: 18px;
-
-    }
-    section ol li a {
-        display: block;
         width: 100%;
         opacity: 0.5;
         /* 内减模式 */
@@ -79,6 +76,32 @@
             -ms-transition: all .25s;
              -o-transition: all .25s;
                 transition: all .25s;
+
+    }
+    section ol li h3 {
+        text-align: center;
+        width: 100%;
+        height: 80px;
+        line-height: 80px;
+        font-size: 18px;
+        width: 100%;
+    }
+    /* 练习 */
+    section ol .practice div {
+      height: 0px;
+      overflow: hidden;
+      transition: all 0.3s 0.5s;
+    }
+
+/*     section ol li:hover .practice:nth-child(2n) a {
+      height: 80px;
+      background-color: rgb(240,240,240);
+    } */
+
+    section ol .practice:hover div {
+      height: 80px;
+      background-color: rgb(254, 255, 242);
+
     }
     /* 偶数 */
     section ol li:nth-child(2n) {
@@ -87,7 +110,6 @@
     }
     section ol li a:hover {
         opacity: 1;
-        /* border: 1px solid rgb(240,240,240); */
         border: 1px solid #ccc;
 
 
@@ -103,6 +125,8 @@
     <a  href='#two' data-cont="two">HTML5第二天</a>
     <a  href='#three' data-cont="three">CSS3第一天</a>
     <a  href='#four' data-cont="four">CSS3第二天</a>
+    <a  href='#five' data-cont="five">CSS3第三天</a>
+    <a  href='#six' data-cont="six">CSS3第四天</a>
 </nav>
     <!-- HTML5第一天 -->
     <section id='one'>
@@ -184,6 +208,7 @@
        </ol>
        <!-- <hr/> -->
     </section>
+
     <!-- HTML5第二天 -->
     <section id="two">
         <h3>语法规范</h3>
@@ -198,6 +223,9 @@
         <ol>
            <li>
              <a href="01.CSS3/01-css3选择器/01-之前学过的选择器.html">之前学过的选择器</a>
+           </li>
+           <li>
+             <a href="01.CSS3/01-css3选择器/02-属性选择器.html">属性选择器</a>
            </li>
            <li>
              <a href="01.CSS3/01-css3选择器/03-伪类选择器.html">伪类选择器</a>
@@ -222,6 +250,15 @@
            </li>
            <li>
              <a href="01.CSS3/01-css3选择器/10-first-line.html">first-line</a>
+           </li>
+           <li>
+             <a href="01.CSS3/01-css3选择器/10-first-line.html">first-line</a>
+           </li>
+           <li class='practice'>
+             <h3>练习</h3>
+             <div>
+               <a href="01.CSS3/01-css3选择器/11-首字下沉-练习.html">首字下沉-练习</a>
+             </div>
            </li>
          </ol>
 
@@ -259,14 +296,17 @@
            <li>
              <a href="01.CSS3/04-盒模型/01-盒子模型详解.html">盒子模型详解</a>
            </li>
-           <li>
-               <a href="01.CSS3/04-盒模型/案例/盒模型-应用.html">案例/盒模型-应用</a>
-           </li>
-           <li>
-               <a href="01.CSS3/04-盒模型/02-边框的形状.html">框的形状</a>
-           </li>
-           <li>
-               <a href="01.CSS3/04-盒模型/03-心形.html">心形</a>
+           <li class="practice">
+                <h3>练习</h3>
+                <div>
+                   <a href="01.CSS3/04-盒模型/案例/盒模型-应用.html">案例/盒模型-应用</a>
+                </div>
+                <div>
+                   <a href="01.CSS3/04-盒模型/02-边框的形状.html">框的形状</a>
+                </div>
+                <div>
+                   <a href="01.CSS3/04-盒模型/03-心形.html">心形</a>
+                </div>
            </li>
          </ol>
 
@@ -278,33 +318,274 @@
         </ol>
     </section>
 
-    <!--CSS3第二天  -->
+    <!-- CSS3第二天 -->
     <section id="four">
+      <h3>01-边框</h3>
+      <ol>
+           <li>
+             <a href="02.CSS3/01-边框/01-边框圆角.html">边框圆角</a>
+           </li>
+           <li>
+             <a href="02.CSS3/01-边框/02-圆角应用.html">圆角应用</a>
+           </li>
+           <li>
+             <a href="02.CSS3/01-边框/03-边框阴影.html">边框阴影</a>
+           </li>
+           <li>
+             <a href="02.CSS3/01-边框/04-边框图片.html">边框图片</a>
+           </li>
+           <li class="practice">
+              <h3>边框-练习</h3>
+              <div><a href="02.CSS3/01-边框/案例/01 边框-应用01.html">边框-应用01</a></div>
+              <div><a href="02.CSS3/01-边框/案例/02 边框-应用02.html">边框-应用02</a></div>
+              <div><a href="02.CSS3/01-边框/案例/03 边框-应用03.html">边框-应用03</a></div>
+              <div><a href="02.CSS3/01-边框/案例/04. 哆啦A梦.html">哆啦A梦</a></div>
+           </li>
+      </ol>
+
+     <h3>02-背景</h3>
+     <ol>
+        <li>
+          <a href="02.CSS3/02-背景/01-背景尺寸.html">背景尺寸</a>
+        </li>
+        <li>
+          <a href="02.CSS3/02-背景/02-背景原点.html">背景原点</a>
+        </li>
+        <li>
+          <a href="02.CSS3/02-背景/03-背景裁剪.html">背景裁剪</a>
+        </li>
+        <li>
+          <a href="02.CSS3/02-背景/04-多背景.html">多背景</a>
+        </li>
+        <li class='practice'>
+          <h3>背景-练习</h3>
+          <div>
+             <a href="02.CSS3/02-背景/案例/01-全屏背景练习.html">全屏背景练习</a>
+          </div>
+          <div>
+             <a href="02.CSS3/02-背景/案例/02-多背景练习.html">多背景练习</a>
+          </div>
+        </li>
+     </ol>
+
+      <h3>03-渐变</h3>
+      <ol>
+          <li>
+            <a href="02.CSS3/03-渐变/01-线性渐变.html">线性渐变</a>
+          </li>
+          <li>
+            <a href="02.CSS3/03-渐变/02-径向渐变.html">径向渐变</a>
+          </li>
+          <li class="practice">
+            <h3>渐变-练习</h3>
+            <div>
+              <a href="02.CSS3/03-渐变/案例/01 渐变-应用-按钮.html">渐变-应用-按钮</a>
+            </div>
+            <div>
+              <a href="02.CSS3/03-渐变/案例/02 渐变-应用-球体.html">渐变-应用-球体</a>
+            </div>
+            <div>
+              <a href="02.CSS3/03-渐变/案例/03 渐变-应用-进度条.html">渐变-应用-进度条</a>
+            </div>
+          </li>
+      </ol>
+
+      <h3>04-过渡</h3>
+      <ol>
+          <li>
+            <a href="02.CSS3/04-过渡/01-过渡体验.html">过渡体验</a>
+          </li>
+          <li>
+            <a href="02.CSS3/04-过渡/02-过渡属性详解.html">过渡属性详解</a>
+          </li>
+          <li class='practice'>
+             <h3>过渡练习</h3>
+             <div>
+              <a href="02.CSS3/04-过渡/案例/01 过渡-应用-汽泡.html"> 过渡-应用-汽泡</a>
+             </div>
+             <div>
+              <a href="02.CSS3/04-过渡/案例/02 过渡-应用-仿小米官网商品列表.html"> 过渡-应用-仿小米官网商品列表</a>
+             </div>
+             <div>
+              <a href="02.CSS3/04-过渡/案例/03 过渡-应用-手风琴菜单.html"> 过渡-应用-手风琴菜单</a>
+             </div>
+
+          </li>
+
+      </ol>
+
+      <h3>05-2d变换</h3>
+      <ol>
+          <li>
+            <a href="02.CSS3/05-2d变换/01-transfrom-scale放缩.html">transfrom-scale放缩</a>
+          </li>
+          <li>
+            <a href="02.CSS3/05-2d变换/02-transform-translate位移.html">transform-translate位移</a>
+          </li>
+          <li>
+            <a href="02.CSS3/05-2d变换/03-定位盒子居中.html">定位盒子居中</a>
+          </li>
+          <li>
+            <a href="02.CSS3/05-2d变换/04-transform-rotate旋转.html">transform-rotate旋转</a>
+          </li>
+          <li class="practice">
+            <h3>2d变换练习</h3>
+            <div>
+              <a href="02.CSS3/05-2d变换/案例/05-小火箭.html">小火箭</a>
+            </div>
+            <div>
+              <a href="02.CSS3/05-2d变换/案例/06-盾牌.html">盾牌</a>
+            </div>
+            <div>
+              <a href="02.CSS3/05-2d变换/案例/07-扑克.html">扑克</a>
+            </div>
+          </li>
+      </ol>
+    </section>
+
+    <!--CSS3第三天  -->
+    <section id="five">
         <h3>01-3D变换</h3>
         <ol>
            <li>
-             <a href="02.CSS3/01-3D变换/01-3D-rotateX.html">3D-rotateX</a>
+             <a href="03.CSS3/01-3D变换/01-3D-rotateX.html">3D-rotateX</a>
            </li>
            <li>
-             <a href="02.CSS3/01-3D变换/02-3D-rotateY.html">3D-rotateY</a>
+             <a href="03.CSS3/01-3D变换/02-3D-rotateY.html">3D-rotateY</a>
            </li>
            <li>
-             <a href="02.CSS3/01-3D变换/03-3D-rotateZ.html">3D-rotateZ</a>
+             <a href="03.CSS3/01-3D变换/03-3D-rotateZ.html">3D-rotateZ</a>
            </li>
            <li>
-             <a href="02.CSS3/01-3D变换/04-3D-translateX.html">3D-translateX</a>
+             <a href="03.CSS3/01-3D变换/04-3D-translateX.html">3D-translateX</a>
            </li>
             <li>
-             <a href="02.CSS3/01-3D变换/05-3D-translateY.html">3D-translateY</a>
+             <a href="03.CSS3/01-3D变换/05-3D-translateY.html">3D-translateY</a>
            </li>
            <li>
-             <a href="02.CSS3/01-3D变换/06-3D-translateZ.html">3D-translateZ</a>
+             <a href="03.CSS3/01-3D变换/06-3D-translateZ.html">3D-translateZ</a>
            </li>
            <li>
-             <a href="02.CSS3/01-3D变换/06-3D-translateZ.html">3D-translateZ</a>
+             <a href="03.CSS3/01-3D变换/07-透视.html">透视</a>
+           </li>
+           <li>
+             <a href="03.CSS3/01-3D变换/08-3d-transfrom-style.html">transfrom-style</a>
+           </li>
+           <li>
+             <a href="03.CSS3/01-3D变换/09-立方体.html">立方体</a>
+           </li>
+           <li>
+             <a href="03.CSS3/01-3D变换/ppp.html">ppp</a>
+           </li>
+        </ol>
+
+        <h3>02-动画</h3>
+        <ol>
+           <li>
+             <a href="03.CSS3/02-动画/01-动画体验.html">动画体验</a>
+           </li>
+           <li>
+             <a href="03.CSS3/02-动画/02-动画属性详解.html">动画属性详解</a>
+           </li>
+           <li class='practice'>
+              <h3>练习</h3>
+              <div>
+                 <a href="03.CSS3/02-动画/03-steps应用.html">steps应用</a>
+              </div>
+              <div>
+                 <a href="03.CSS3/02-动画/案例/fishes/01-fish01.html">01fish-练习</a>
+              </div>
+              <div>
+                 <a href="03.CSS3/02-动画/案例/fishes/02-testfish.html">02fish-练习</a>
+                 </div>
+              <div>
+                  <a href="03.CSS3/02-动画/案例/大海波涛/01-大海-练习.html">大海-练习</a>
+              </div>
+              <div>
+                 <a href="03.CSS3/02-动画/案例/动态进度条/index.html">动态进度条-练习</a>
+              </div>
+              <div>
+                 <a href="03.CSS3/02-动画/案例/全屏切换/01-全屏切换练习.html">屏切换-练习</a>
+              </div>
+              <div>
+                 <a href="03.CSS3/02-动画/案例/跳动的心/index.html">跳动的心-练习</a>
+              </div>
+              <div>
+                 <a href="03.CSS3/02-动画/案例/无缝滚动/01-无缝滚动-练习.html">无缝滚动-练习</a>
+              </div>
+              <div>
+                <a href="03.CSS3/02-动画/案例/宇宙/index.html">宇宙-练习</a>
+              </div>
+              <div>
+                <a href="03.CSS3/02-动画/案例/钟表/index.html">钟表-练习</a>
+              </div>
+              <div>
+                <a href="03.CSS3/02-动画/案例/01-太阳系案例.html">太阳系-练习</a>
+              </div>
+           </li>
+        </ol>
+
+        <h3>03-多列布局</h3>
+        <ol>
+           <li>
+             <a href="03.CSS3/03-多列布局/01 多列布局.html">多列布局</a>
            </li>
         </ol>
     </section>
+
+    <!--CSS3第四天  -->
+    <section id='six'>
+       <h3>01-伸缩布局</h3>
+       <ol>
+           <li>
+             <a href="04.CSS3/01-伸缩布局/01-伸缩布局.html">伸缩布局</a>
+           </li>
+           <li>
+             <a href="04.CSS3/01-伸缩布局/02-justify-content.html">justify-content</a>
+           </li>
+           <li>
+             <a href="04.CSS3/01-伸缩布局/03-侧轴对齐方式.html">侧轴对齐方式</a>
+           </li>
+           <li>
+             <a href="04.CSS3/01-伸缩布局/04-flex伸缩比例.html">flex伸缩比例</a>
+           </li>
+           <li>
+             <a href="04.CSS3/01-伸缩布局/参考/01 伸缩布局-介绍.html">伸缩布局-介绍</a>
+           </li>
+           <li class="practice">
+            <h3>伸缩布局练习</h3>
+            <div>
+             <a href="04.CSS3/01-伸缩布局/参考/01 伸缩布局-介绍.html">伸缩布局-介绍</a>
+            </div>
+            <div>
+             <a href="04.CSS3/01-伸缩布局/参考/02 伸缩布局-详解 flex-direction.html">flex-direction</a>
+            </div>
+            <div>
+             <a href="04.CSS3/01-伸缩布局/参考/03 伸缩布局-详解 justify-content.html">justify-content</a>
+            </div>
+            <div>
+             <a href="04.CSS3/01-伸缩布局/参考/04 伸缩布局-详解 align-items.html">align-items</a>
+            </div>
+            <div>
+             <a href="04.CSS3/01-伸缩布局/参考05 伸缩布局-详解 flex-wrap.html">flex-wrap</a>
+            </div>
+            <div>
+             <a href="04.CSS3/01-伸缩布局/参考/06 伸缩布局-详解 align-content.html">align-content</a>
+            </div>
+            <div>
+             <a href="04.CSS3/01-伸缩布局/参考/07 伸缩布局-详解 flex.html">flex</a>
+            </div>
+            <div>
+             <a href="04.CSS3/01-伸缩布局/参考/09 伸缩布局-详解 align-self.html">align-self</a>
+            </div>
+            <div>
+             <a href="04.CSS3/01-伸缩布局/参考/10 伸缩布局-详解 order.html">order</a>
+            </div>
+           </li>
+       </ol>
+    </section>
+
+
 </body>
     <script >
         var str = location.href
@@ -320,6 +601,10 @@
                 num = 2
             }else if(hash == 'four'){
                 num = 3
+            }else if(hash == 'five'){
+               num = 4
+            }else if(hash == 'six'){
+               num = 5
             }
             console.log(num)
             //切换导航栏
