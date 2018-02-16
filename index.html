@@ -49,12 +49,16 @@
     nav a.active {
         background-color: #9BAF9B;
     }
+
     section {
         display: block;
     }
+
     section>h3 {
-        margin: 15px auto;
+        /* margin: 15px auto; */
         /* font-weight: normal; */
+        height: 80px;
+        line-height: 80px;
         text-align: center;
     }
     section  {
@@ -85,6 +89,8 @@
         line-height: 80px;
         font-size: 18px;
         width: 100%;
+        color: skyblue;
+         text-shadow: 2px 2px 5px   #333;
     }
     /* 练习 */
     section ol .practice div {
@@ -117,7 +123,22 @@
     section ol li:nth-child(2n+1) {
         background-color: rgb(254, 255, 242);
     }
-
+    /* 笔记 */
+    section .readme {
+      display: block;
+      width: 100%;
+      height: 80px;
+      line-height: 80px;
+      text-align: center;
+      font-size: 18px;
+      color: #ccc;
+      background-color: rgb(254, 255, 242);
+      opacity: 0.5;
+      transition: all 0.3s;
+    }
+     section .readme:hover {
+      opacity: 1.0;
+     }
 </style>
 <body>
     <nav>
@@ -130,6 +151,7 @@
 </nav>
     <!-- HTML5第一天 -->
     <section id='one'>
+        <a  href='01.HTML5/笔记.html' class='readme'>笔记</a>
         <h3>语法规范</h3>
         <ol>
            <li>
@@ -211,6 +233,7 @@
 
     <!-- HTML5第二天 -->
     <section id="two">
+        <a  href='02.HTML5/笔记.html' class='readme'>笔记</a>
         <h3>01-多媒体</h3>
         <ol>
             <li>
@@ -294,6 +317,7 @@
 
     <!-- CSS3第一天 -->
     <section id="three">
+        <a  href='01.CSS3/笔记.html' class='readme'>笔记</a>
         <h3>01-css3选择器</h3>
         <ol>
            <li>
@@ -395,6 +419,7 @@
 
     <!-- CSS3第二天 -->
     <section id="four">
+      <a  href='02.CSS3/笔记.html' class='readme'>笔记</a>
       <h3>01-边框</h3>
       <ol>
            <li>
@@ -520,6 +545,7 @@
 
     <!--CSS3第三天  -->
     <section id="five">
+        <a  href='03.CSS3/笔记.html' class='readme'>笔记</a>
         <h3>01-3D变换</h3>
         <ol>
            <li>
@@ -610,6 +636,7 @@
 
     <!--CSS3第四天  -->
     <section id='six'>
+       <a  href='04.CSS3/笔记.html' class='readme'>笔记</a>
        <h3>01-伸缩布局</h3>
        <ol>
            <li>
@@ -658,6 +685,37 @@
             </div>
            </li>
        </ol>
+
+       <h3>02-web字体</h3>
+       <ol>
+           <li>
+             <a href="04.CSS3/02-web字体/01-web字体/">web字体</a>
+           </li>
+           <li>
+             <a href="04.CSS3/02-web字体/02-图标字体/02-字体引用.html">字体引用</a>
+           </li>
+           <li>
+             <a href="04.CSS3/02-web字体/02-图标字体/03-伪元素图标字体.html">伪元素图标字体</a>
+           </li>
+       </ol>
+
+       <h3>03-360案例</h3>
+       <ol>
+           <li>
+             <a href="04.CSS3/03-360案例/01-鼠标滚轮事件.html">鼠标滚轮事件</a>
+           </li>
+           <li>
+             <a href="04.CSS3/03-360案例/my-360">my-360</a>
+           </li>
+           <li class='practice'>
+             <h3>练习</h3>
+             <div>
+               <a href="04.CSS3/锤子3Dbanner/3dbanner.html">3dbanner</a>
+            </div>
+           </li>
+       </ol>
+
+
     </section>
 
 

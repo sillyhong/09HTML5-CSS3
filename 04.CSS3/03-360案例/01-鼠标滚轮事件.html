@@ -7,16 +7,36 @@
         body{
             height: 2000px;
         }
+        h1{
+            position:relative;
+            background-color: #ccc;
+            height: 40px;
+        }
+
+        h1 span {
+            position: absolute;
+            bottom:0;
+            left: 50%;
+        }
+
     </style>
 </head>
 <body>
-
+    <h1>
+        <span>123</span>
+    </h1>
 <script>
     var num=0;
+    var h1Text = document.getElementsByTagName('h1')
+    var span = document.getElementsByTagName('span')
 //    鼠标滚轮事件
-    window.onmousewheel=function(){
+    window.onmousewheel=function(e){
+        // console.log(e.offsetY)
+        // console.log(h1Text[0])
+        h1Text[0].style.height = e.offsetY + 40 + 'px'
         num++;
         console.log(num);
+        span[0].innerHTML = num
     }
 </script>
 
