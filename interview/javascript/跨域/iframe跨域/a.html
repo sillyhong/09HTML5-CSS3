@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>a.html</title>
+</head>
+<body>
+    <h1>我是a.html</h1>
+</body>
+
+<!-- 同源政策
+    第一个限制 不能通过ajax的方法去请求不同源中文档
+    第二个限制 浏览器中不同域的框架之间是不能进行js的交互操作的
+ -->
+<script type="text/javascript" >
+    function test(){
+    document.domain = '127.0.0.1'
+
+        var iframe = document.getElementById('iframe');
+        var win = iframe.contentWindow;//可以获取到iframe里的window对象，但该window对象的属性和方法几乎是不可用的
+        var doc = win.document;//这里获取不到iframe里的document对象
+        var name = win.name;//这里同样获取不到window对象的name属性
+
+        console.log(iframe)
+        // console.log(win)
+        console.log(doc)
+        console.log(name)
+    }
+</script>
+<iframe id='iframe' src="http://127.0.0.1:8080/b.html" onload='test()'></iframe>
+<!-- <iframe id='iframe' src="http://baidu.com" onload='test()'></iframe> -->
+</html>

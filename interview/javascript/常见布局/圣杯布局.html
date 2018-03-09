@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>常见布局</title>
+</head>
+<style>
+    .HolyGrail {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  text-align:center;
+}
+
+header,
+footer {
+  flex: 1;
+  background-color: #ccc;
+}
+
+.HolyGrail-body {
+  display: flex;
+  flex: 1;
+}
+
+.HolyGrail-content {
+  flex: 1;
+  background-color: red;
+}
+
+.HolyGrail-nav, .HolyGrail-ads {
+  /* 两个边栏的宽度设为12em */
+  flex: 0 0 12em;
+}
+
+.HolyGrail-nav {
+  /* 导航放到最左边 */
+  order: -1;
+  background-color: green;
+}
+
+/* 如果是小屏幕 躯干的三栏自动变垂直叠加爱 */
+@media (max-width: 768px){
+    .HolyGrail-body {
+        flex-direction: column;
+        flex:1;
+    }
+    .HolyGrail-nav,
+    .HolyGrail-ads,
+    .HolyGrail-content {
+    flex: auto;/* 1 1 auto */
+  }
+}
+
+</style>
+
+<body class="HolyGrail">
+  <header>头部</header>
+  <div class="HolyGrail-body">
+    <nav class="HolyGrail-nav">导航</nav>
+    <main class="HolyGrail-content">主栏</main>
+    <aside class="HolyGrail-ads">副栏</aside>
+  </div>
+  <footer>底部</footer>
+</body>
+
+</html>

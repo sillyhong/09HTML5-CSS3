@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>事件捕获&&事件冒泡</title>
+    <style type="text/css">
+        div {
+            position: relative;
+            height: 500px;
+            background-color: red;
+        }
+        ul {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height:200px;
+            width: 80%;
+            background-color: green;
+        }
+        li{
+            position: absolute;;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width:80%;
+            height: 50px;
+            /* height: 100px; */
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>
+                <a href="http://www.jb51.net/article/84226.htm" target='_blank'>123</a>
+            </li>
+        </ul>
+    </div>
+</body>
+<script>
+    var div = document.getElementsByTagName('div')[0]
+    var ul = document.getElementsByTagName('ul')[0]
+    var li = document.getElementsByTagName('li')[0]
+    var a = document.getElementsByTagName('a')[0]
+
+        console.log(div, ul, li,a)
+
+    //事件绑定   时间监听
+    //true 表示捕获阶段  false 表示冒泡阶段
+    // div.addEventHandler('click', click1, false)
+    // ul.addEventHandler('click', click2, true)
+    // li.addEventHandler('click', click3, true)
+    // a.addEventHandler('click', click4, true)
+
+    addEventHandler(div, 'click', click1, false)
+    addEventHandler(ul, 'click', click2, true)
+    addEventHandler(li, 'click', click3, true)
+    addEventHandler(a, 'click', click4, true)
+
+
+    function click1(e){
+        alert('div')
+    }
+    function click2(e){
+        // stopDefault(e)
+        alert('ul')
+    }
+    function click3(e){
+        // stopBubble(e)
+        alert('li')
+    }
+
+    function click4(e){
+       stopDefault(e)
+    }
+
+
+    // 组织冒泡的通用方法
+    function stopBubble(e) {
+    //如果提供了事件对象，是非IE浏览器
+    if ( e && e.stopPropagation )
+      //使用W3C的stopPropagation()方法
+      e.stopPropagation();
+    else
+      //使用IE的cancelBubble = true来取消事件冒泡
+      window.event.cancelBubble = true;
+    }
+
+    //阻止浏览器的默认行为
+    function stopDefault( e ) {
+      //阻止默认浏览器动作(W3C)
+      if ( e && e.preventDefault )
+        e.preventDefault();
+      //IE中阻止函数器默认动作的方式
+      else{
+         window.event.returnValue = false;
+         return false;
+      }
+
+    }
+
+
+    //绑定监听事件
+    function addEventHandler(target, type, fn, bool){
+        if(target.addEventListener){
+            target.addEventListener(type,fn, bool);
+        }else{
+            target.attachEvent('on'+type, fn)
+        }
+    }
+
+    //移出监听事件
+    function removeEventHandler(target, type, fn){
+        if(target.removeEventListener){
+            target.removeEventListener(type, fn)
+        }else{
+            target.detachEvent('on'+type, fn)
+        }
+    }
+</script>
+</html>

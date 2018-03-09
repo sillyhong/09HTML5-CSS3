@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>DOMContentLoaded&readyState.html</title>
+</head>
+<body>
+
+</body>
+<script>
+
+
+
+    alert("文档解析开始"+document.readyState)
+
+    document.addEventListener('DOMContentLoaded', function(){
+        alert('页面资源基本加载(除图片视频音频)')
+        alert("文档基本完成" + document.readyState)
+    })
+
+
+    window.onload = function(){
+        alert('页面所有资源完全加载(包括图片视频音频)')
+        alert("文档解析完成"+ document.readyState)
+    }
+</script>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>面试准备</title>
+</head>
+<style type="text/css">
+        * {
+        margin: 0;
+        padding: 0;
+    }
+    a {
+        text-decoration: none;
+    }
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #F7F7F7;
+    }
+    nav {
+        display: flex;
+        width: 80%;
+        text-align: center;
+        margin: 15px auto;
+        line-height: 40px;
+        overflow: hidden;
+    }
+    nav a {
+        flex: 1;
+        width: 25%;
+        height: 80px;
+        color: #000;
+        line-height: 80px;
+        font-size:18px;
+        border-right: 1px solid #FFF;
+        text-decoration: none;
+        border-radius: 10px;
+        background-color: skyblue;
+        opacity: 0.6;
+        transition: all 0.25s;
+    }
+    nav a:hover {
+        opacity: 1.0;
+        /* transform: skew(0deg,5deg); */
+    }
+    nav a:last-child {
+        border-right: 0 none;
+    }
+    nav a.active {
+        background-color: #9BAF9B;
+    }
+    section {
+        display: block;
+    }
+
+    section>h3 {
+        /* margin: 15px auto; */
+        /* font-weight: normal; */
+        height: 80px;
+        line-height: 80px;
+        text-align: center;
+    }
+    section  {
+        display: none;
+    }
+    section ol li a {
+        display: block;
+        text-align: center;
+        width: 100%;
+        height: 80px;
+        line-height: 80px;
+        font-size: 18px;
+        width: 100%;
+        opacity: 0.5;
+        /* 内减模式 */
+        box-sizing: border-box;
+        -webkit-transition: all .25s;
+           -moz-transition: all .25s;
+            -ms-transition: all .25s;
+             -o-transition: all .25s;
+                transition: all .25s;
+
+    }
+    section ol li h3 {
+        text-align: center;
+        width: 100%;
+        height: 80px;
+        line-height: 80px;
+        font-size: 18px;
+        width: 100%;
+        color: skyblue;
+         text-shadow: 2px 2px 5px   #333;
+    }
+    /* 练习 */
+    section ol .practice div {
+      height: 0px;
+      overflow: hidden;
+      transition: all 0.3s 0.5s;
+    }
+
+/*     section ol li:hover .practice:nth-child(2n) a {
+      height: 80px;
+      background-color: rgb(240,240,240);
+    } */
+
+    section ol .practice:hover div {
+      height: 80px;
+      background-color: rgb(254, 255, 242);
+
+    }
+    /* 偶数 */
+    section ol li:nth-child(2n) {
+        background-color: rgb(240,240,240);
+
+    }
+    section ol li a:hover {
+        opacity: 1;
+        border: 1px solid #ccc;
+
+
+    }
+    section ol li:nth-child(2n+1) {
+        background-color: rgb(254, 255, 242);
+    }
+    /* 笔记 */
+    section .readme {
+      display: block;
+      width: 100%;
+      height: 80px;
+      line-height: 80px;
+      text-align: center;
+      font-size: 18px;
+      color: #ccc;
+      background-color: rgb(254, 255, 242);
+      opacity: 0.5;
+      transition: all 0.3s;
+    }
+     section .readme:hover {
+      opacity: 1.0;
+     }
+</style>
+<body>
+    <nav>
+    <a href="">Web综合问题</a>
+    <a href="">CSS部分</a>
+    <a href="">javaScript概念部分</a>
+    </nav>
+
+</body>
+</html>

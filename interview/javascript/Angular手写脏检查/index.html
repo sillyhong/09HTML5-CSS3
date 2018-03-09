@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>手写脏检查</title>
+</head>
+<style type="text/css">
+    button {
+        height: 60px;
+        width: 100px;
+    }
+    p {
+        margin-left: 20px;
+    }
+</style>
+<!-- 事件绑定和变量绑定实现数据绑定 -->
+<!-- <script src="dirty-checking-0.0.1.js"></script> -->
+<!-- 实现$watch $digest脏检查 -->
+<!-- <script src="dirty-checking-0.0.2.js"></script> -->
+<!-- 整合事件绑定和属性绑定显示数据 使用$digest实现数据脏检查 -->
+<!-- <script src="dirty-checking-0.0.3.js"></script> -->
+<!-- 真正接近Angular双向绑定机制 -->
+<script src="dirty-checking-0.0.4.js"></script>
+<body>
+ <!--    <div>
+        <button ng-click='increase'>增加</button>
+        <button ng-click='decrease'>减少</button>
+        数量： <span ng-bind='data'></span>
+    </div>
+    <span>总计:</span><span ng-bind='sum'></span> -->
+    <div>
+        <button ng-click='increaseSprite'>增加</button>
+        <button ng-click='decreaseSprite'>減少</button>
+        雪碧 ： <span ng-bind='sprite'></span>
+    </div>
+    <div>
+        <button ng-click='increaseCola'>增加</button>
+        <button ng-click='decreaseCola'>減少</button>
+        可乐 : <span ng-bind='cola'></span>
+    </div>
+    合计 = <span ng-bind='sum'></span>
+</body>
+
+</html>

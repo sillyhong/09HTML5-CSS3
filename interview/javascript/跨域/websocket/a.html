@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>a</title>
+</head>
+<body>
+    <h1>a页面</h1>
+</body>
+<script >
+
+var ws = new WebSocket('ws://127.0.0.1:8080'); //新建一个WebSocket对象，注意服务器端的协议必须为“ws://”或“wss://”，其中ws开头是普通的websocket连接，wss是安全的websocket连接，类似于https。
+ws.onopen = function() {
+    // 连接被打开时调用
+    alert(1)
+};
+ws.onerror = function(e) {
+    // 在出现错误时调用，例如在连接断掉时
+};
+ws.onclose = function() {
+    // 在连接被关闭时调用
+};
+ws.onmessage = function(msg) {
+    // 在服务器端向客户端发送消息时调用
+    // msg.data包含了消息
+};
+// 这里是如何给服务器端发送一些数据
+ws.send('some data');
+// 关闭套接口
+ws.close();
+</script>
+</html>

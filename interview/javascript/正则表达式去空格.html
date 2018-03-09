@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>正则表达式去空格</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+
+    // \g 全局匹配（匹配多次）
+    // \s 匹配任何空字符 包括空格、制表符、换页符
+    // \S 匹配任何非空表白字符
+    //  * 匹配零次或者多次
+    //  + 匹配一次或者多次
+    //  ^ 匹配输入字符串的开始位置
+    //  $ 匹配输入字符串的结束位置
+
+
+    var str = ' hello weihong  '
+
+    //去掉前后空格
+    function trim(str){
+        var regExp = /(^\s*)|(\s*$)/g
+        return str.replace(regExp, "")
+    }
+    // alert(myTrim(str))
+
+    //只去掉前面的空格
+    function trimLeft(str){
+        var regExp = /^\s*/g
+        return str.replace(regExp, "")
+    }
+
+    //只去掉后面的空格
+     function trimRight(str){
+        var regExp = /\s*$/g
+        return str.replace(regExp, "")
+    }
+    alert(trim(str) +'\n'+ trimLeft(str) +'\n' +trimRight(str) )
+    console.log(trim(str))
+    console.log(trimLeft(str))
+    console.log(trimRight(str))
+</script>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>getAttribute&&propName</title>
+</head>
+<body>
+    <p><b>property是DOM中的属性，是javascript里的对象</b></p>
+    <p><b>attribute是HTML标签上的特性，它的值只能够使字符串</b></p>
+
+
+    <p><b>property能够从attribute中得到同步 修改property同时修改attribute</b></p>
+    <p><b>attribute不会同步property上的值</b></p>
+
+    <h3><a href='../index.html' id='box' data-name='we' title='123'>a标签</a></h3>
+    <div>
+        href属性值
+       <p>
+          getAttribute:../index.html
+       </p>
+       <p>
+           propName:file:///D:/1.%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%E8%A7%86%E9%A2%91/03%E5%89%8D%E7%AB%AF%E8%A7%86%E9%A2%91%E6%A0%B8%E5%BF%83%E7%AF%87/09-HTML5+CSS3/09-HTML5+CSS3/09HTML5CSS3/interview/index.html
+       </p>
+    </div>
+
+    <form value='hello'>form</form>
+</body>
+<script >
+    var box = document.getElementById('box')
+    var href = box.getAttribute('href')
+    var href2= box.href
+    console.log("getAttribute:" +href)
+    console.log("propName:" + href2)
+
+
+    var form = document.getElementsByTagName('form')
+    var value = form[0].getAttribute('value')
+    var value2 = form[0].attributes.value
+    console.log("getAttribute:" + value)
+    console.log("propName:" + value2)
+</script>
+</html>

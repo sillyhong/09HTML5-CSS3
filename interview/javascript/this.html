@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script >
+
+//1.函数调用 属于全局调用，this就代表全局对象Global
+    // var x = 1
+    // function test(){
+    //     this.x = 1
+    //     alert(this.x)
+    // }
+    // test()//1
+
+    // var x = 1
+    // function test(){
+    //     this.x = 0
+    //     alert(this.x)
+    // }
+    // test()//0
+    // alert(0)
+
+//2.对象方法的调用 函数可以作为一个对象的方法去调用，这是this就指向这个对象
+   //  function test(){
+   //   alert(this.x)
+   // }
+   //  var o ={}
+   //  o.x = 1;
+   //  o.func = test;
+   //  o.func()//1
+
+
+//三作为构造函数调用
+// 所谓构造函数，就是通过这个函数生成一个新对象。这是,this就指向这个新对象
+
+    // var x = 2 //为了证明this不是全局对象，
+    // function test(){
+    //     this.x = 1
+    // }
+
+    // var o = new test()
+    // alert(o.x)//1
+    // alert(2)//2
+
+
+ //apply调用
+    var x = 0
+    function test(){
+        alert(this.x)
+    }
+    var o = {}
+    o.x = 1
+    o.func = test
+    // this默认指向全部对象
+    o.func.apply()//0
+    // this指向o
+    o.func.apply(o)//1
+
+</script>
+</html>

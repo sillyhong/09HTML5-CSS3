@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>判断是否是移动设备</title>
+</head>
+<body>
+
+</body>
+<script >
+    //userAgent 客户端发送给服务器的设备信息
+
+    //JS判断设备来源
+  function deviceType(){
+        var ua = navigator.userAgent;
+        var agent = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"];
+        for(var i=0,len = agent.length; i<len; i++){
+            if(ua.indexOf(agent[i])>0){
+                alert(agent[i])
+                break
+            }
+        }
+    }
+
+    deviceType()
+    window.addEventListener('resize', function(){
+        // console.log(1)
+        deviceType()
+    })
+
+    //微信判断
+    function isWeixin(){
+        var us = navigator.userAgent.toLowerCase()
+        if(ua.match(/MicroMessenger/i) == 'micromessenger'){
+            return true
+        }else{
+            return false
+        }
+    }
+</script>
+</html>
