@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS 过渡</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #F7F7F7;
+		}
+		.items {
+			width: 1250px;
+			height: 320px;
+			padding-left: 20px;
+			margin: 80px auto;
+		}
+
+		.item {
+			width: 230px;
+			height: 300px;
+			text-align: center;
+			margin-right: 20px;
+			border: 1px solid #fff;
+			float: left;
+			transition: all .5s;
+		}
+
+		.pic {
+			position:relative;
+			padding-top: 50px;
+
+		}
+
+		.pic::after {
+			content: '';
+			position: absolute;
+			top: 15px;
+			right: 0px;
+			width: 230px;
+			height: 230px;
+			border-radius: 50%;
+			background-color: #eee;
+			z-index: -1;
+		}
+		img {
+			-webkit-transition: all .5s;
+			-o-transition: all .5s;
+			transition: all .5s;
+			-webkit-transform: scale(1);
+			-moz-transform: scale(1);
+			-ms-transform: scale(1);
+			-o-transform: scale(1);
+			transform: scale(1);
+		}
+		img:hover {
+			-webkit-transform: scale(1.1);
+			-ms-transform: scale(1.1);
+			-o-transform: scale(1.1);
+			transform: scale(1.1);
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="items">
+		<div class="item">
+			<div class="pic">
+				<img src="./images/2.jpg" alt="">
+			</div>
+		</div>
+
+		<div class="item">
+			<div class="pic">
+				<img src="./images/3.jpg" alt="">
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

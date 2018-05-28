@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>text-overflow解决排版问题</title>
+    <style type="text/css" media="screen">
+        .text1 {
+           margin: 100px auto;
+           text-align:center;
+           width:100px;
+           height: 50px;
+           border: 1px solid red;
+           overflow: hidden;
+        }
+        .text2 {
+           margin: 100px auto;
+           text-align:center;
+           width:100px;
+           height: 50px;
+           border: 1px solid red;
+           overflow: hidden;
+           /* 兼容性问题 */
+           -webkit-text-overflow: ellipsis;
+           -ms-text-overflow: ellipsis;
+           text-overflow: ellipsis;
+           white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="text1">
+        自己做好的主题，但是因为没有后台的主题配置，所以别人想用的时候，必须自己一点一点的修改代码，有点html和css基础的人倒是无所谓，但是对于小白来说，改一个logo都不会，还是很郁闷的。所以zblog主题一般都会
+    </div>
+    <div class="text2">
+        自己做好的主题，但是因为没有后台的主题配置，所以别人想用的时候，必须自己一点一点的修改代码，有点html和css基础的人倒是无所谓，但是对于小白来说，改一个logo都不会，还是很郁闷的。所以zblog主题一般都会
+    </div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>五角星和六角星</title>
+</head>
+<style type="text/css" media="screen">
+    /* 五角星 */
+    .five-star {
+        position: relative;
+        margin: 200px auto;
+        width: 0;
+        height: 0;
+        border-left: 100px solid  transparent;
+        border-right: 100px solid  transparent;
+        border-bottom: 70px solid  red;
+        -webkit-transform: rotate(35deg);
+        -ms-transform: rotate(35deg);
+        -o-transform: rotate(35deg);
+        transform: rotate(35deg);
+    }
+    .five-star::before {
+       content: '';
+       position: absolute;
+       width: 0;
+       height: 0;
+       top: -45px;
+       left: -60px;
+       border-left: 30px solid  transparent;
+       border-right: 30px solid  transparent;
+       border-bottom: 80px solid  red;
+        -webkit-transform: rotate(-35deg);
+        -ms-transform: rotate(-35deg);
+        -o-transform: rotate(-35deg);
+        transform: rotate(-35deg);
+    }
+    .five-star::after {
+        content:'';;
+        position: absolute;;
+        width: 0;
+        height: 0;
+        top: 3px;
+        left: -105px;
+        border-left: 100px solid  transparent;
+        border-right: 100px solid  transparent;
+        border-bottom: 70px solid  red;
+        -webkit-transform: rotate(-70deg);
+        -ms-transform: rotate(-70deg);
+        -o-transform: rotate(-70deg);
+        transform: rotate(-70deg);
+    }
+    /* 六角星 */
+    .six-star {
+        position: relative;
+        margin: 150px auto;
+        width: 0;
+        height: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-bottom: 100px solid red;
+    }
+    .six-star::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-top: 100px solid red;
+        top: 30px;
+        left: -50px;
+    }
+</style>
+<body>
+    <div class="five-star">
+
+    </div>
+    <div class="six-star">
+
+    </div>
+</body>
+</html>

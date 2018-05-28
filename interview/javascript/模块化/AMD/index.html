@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>AMD</title>
+</head>
+<body>
+
+</body>
+<!-- 引入requireJS -->
+<script src="./require.js"></script>
+<script>
+    //引入模块 异步执行
+    require(['main'], function(main){
+        alert('index')
+        //类似于Angular的依赖注入
+        console.log(main.name)
+    })
+    //异步执行
+    alert('在require引入模块前')
+</script>
+</html>

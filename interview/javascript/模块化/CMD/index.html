@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>CMD</title>
+</head>
+<body>
+
+</body>
+<script src="https://cdn.bootcss.com/seajs/3.0.2/runtime-debug.js"></script>
+<!-- <script src="./sea.js"></script> -->
+<script>
+ // seajs.use('./math.js');
+//加载模块
+seajs.use(['./main.js', './math.js'], function(main, math){
+    alert('index')
+  var data= main.data;
+  var data2 = math.data
+  console.log(data);  //1
+  // console.log(data2);  //weihong
+})
+</script>
+</html>
